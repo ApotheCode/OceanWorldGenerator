@@ -1,0 +1,21 @@
+CUDA FILES UPDATED
+==================
+
+All 6 files now write binary with proper headers:
+
+1. TerrainIntegrator.cu - TERRAIN_MAGIC (0x54455252)
+2. PNPLGenerator.cu - PNPL_MAGIC (0x504E504C)  
+3. RainfallCalculator.cu - RAINFALL_MAGIC (0x52414E46)
+4. HeightmapConverter.cu - HEIGHTMAP_MAGIC (0x48454947)
+5. CSV_to_Binary_Converter.cu - CSVDATA_MAGIC (0x43535644)
+6. BiomeClassifier_HighResolution.cu - BIOME_MAGIC (0x42494F4D)
+
+HEADER FORMAT (24 bytes):
+- uint32 Magic
+- uint32 Version  
+- int32 Depth
+- int32 Height
+- int32 Width
+- int32 TotalVariables
+
+All files in /mnt/user-data/outputs/

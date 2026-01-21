@@ -1,0 +1,1141 @@
+{
+  "$id": "1",
+  "Assets": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "Terrain": {
+          "$id": "4",
+          "Id": "273d662e-8b4d-4016-9f4b-ef293c934dc1",
+          "Metadata": {
+            "$id": "5",
+            "Name": "",
+            "Description": "",
+            "Version": "2.2.6.0",
+            "DateCreated": "2025-11-19 16:35:42Z",
+            "DateLastBuilt": "2025-11-19 16:35:42Z",
+            "DateLastSaved": "2025-11-19 16:35:42Z",
+            "ModifiedVersion": "2.2.6.0"
+          },
+          "Nodes": {
+            "$id": "6",
+            "435": {
+              "$id": "7",
+              "$type": "QuadSpinner.Gaea.Nodes.Voronoi, Gaea.Nodes",
+              "Jitter": 0.2963744,
+              "Form": "D",
+              "Clamp": 0.7050389,
+              "Seed": 51558,
+              "Frequency": 0.056145024,
+              "Amplitude": 0.085210964,
+              "Id": 435,
+              "Name": "Voronoi",
+              "Position": {
+                "$id": "8",
+                "X": 26302.057,
+                "Y": 26168.582
+              },
+              "Ports": {
+                "$id": "9",
+                "$values": [
+                  {
+                    "$id": "10",
+                    "Name": "In",
+                    "Type": "PrimaryIn",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "7"
+                    }
+                  },
+                  {
+                    "$id": "11",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "7"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "12",
+                "$values": []
+              }
+            },
+            "958": {
+              "$id": "13",
+              "$type": "QuadSpinner.Gaea.Nodes.Adjust, Gaea.Nodes",
+              "Multiply": 6.2334795,
+              "Shaper": -0.3732077,
+              "Clamp": {
+                "$id": "14",
+                "Y": 0.12175854
+              },
+              "Clip": {
+                "$id": "15",
+                "Y": 0.17949755
+              },
+              "Id": 958,
+              "Name": "Adjust",
+              "NodeSize": "Small",
+              "Position": {
+                "$id": "16",
+                "X": 27083.723,
+                "Y": 26188.582
+              },
+              "Ports": {
+                "$id": "17",
+                "$values": [
+                  {
+                    "$id": "18",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "19",
+                      "From": 968,
+                      "To": 958,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "13"
+                    }
+                  },
+                  {
+                    "$id": "20",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "13"
+                    }
+                  },
+                  {
+                    "$id": "21",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "13"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "22",
+                "$values": []
+              }
+            },
+            "309": {
+              "$id": "23",
+              "$type": "QuadSpinner.Gaea.Nodes.Blur, Gaea.Nodes",
+              "Radius": 0.02231354,
+              "Id": 309,
+              "Name": "Blur",
+              "NodeSize": "Small",
+              "Position": {
+                "$id": "24",
+                "X": 27204.387,
+                "Y": 26168.582
+              },
+              "Ports": {
+                "$id": "25",
+                "$values": [
+                  {
+                    "$id": "26",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "27",
+                      "From": 958,
+                      "To": 309,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "23"
+                    }
+                  },
+                  {
+                    "$id": "28",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "23"
+                    }
+                  },
+                  {
+                    "$id": "29",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "23"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "30",
+                "$values": []
+              }
+            },
+            "287": {
+              "$id": "31",
+              "$type": "QuadSpinner.Gaea.Nodes.Warp, Gaea.Nodes",
+              "Size": 0.08213848,
+              "Strength": 0.6966407,
+              "Roughness": 0.0,
+              "Seed": 50734,
+              "Id": 287,
+              "Name": "Warp",
+              "NodeSize": "Compact",
+              "Position": {
+                "$id": "32",
+                "X": 27475.055,
+                "Y": 26203.582
+              },
+              "Ports": {
+                "$id": "33",
+                "$values": [
+                  {
+                    "$id": "34",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "35",
+                      "From": 632,
+                      "To": 287,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "31"
+                    }
+                  },
+                  {
+                    "$id": "36",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "31"
+                    }
+                  },
+                  {
+                    "$id": "37",
+                    "Name": "Modulator",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "31"
+                    }
+                  },
+                  {
+                    "$id": "38",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "31"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "39",
+                "$values": []
+              }
+            },
+            "968": {
+              "$id": "40",
+              "$type": "QuadSpinner.Gaea.Nodes.Perlin, Gaea.Nodes",
+              "Scale": 0.009217541,
+              "Octaves": 14,
+              "Clamp": 0.8709545,
+              "Seed": 13458,
+              "Amplitude": 0.12822612,
+              "WarpOctaves": 6,
+              "Id": 968,
+              "Name": "Perlin",
+              "Position": {
+                "$id": "41",
+                "X": 26782.055,
+                "Y": 26344.914
+              },
+              "Ports": {
+                "$id": "42",
+                "$values": [
+                  {
+                    "$id": "43",
+                    "Name": "In",
+                    "Type": "PrimaryIn",
+                    "Record": {
+                      "$id": "44",
+                      "From": 934,
+                      "To": 968,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "40"
+                    }
+                  },
+                  {
+                    "$id": "45",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "40"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "46",
+                "$values": []
+              }
+            },
+            "934": {
+              "$id": "47",
+              "$type": "QuadSpinner.Gaea.Nodes.Mask, Gaea.Nodes",
+              "Id": 934,
+              "Name": "Mask",
+              "NodeSize": "Small",
+              "Position": {
+                "$id": "48",
+                "X": 26654.723,
+                "Y": 26344.914
+              },
+              "Ports": {
+                "$id": "49",
+                "$values": [
+                  {
+                    "$id": "50",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "51",
+                      "From": 435,
+                      "To": 934,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "47"
+                    }
+                  },
+                  {
+                    "$id": "52",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "47"
+                    }
+                  },
+                  {
+                    "$id": "53",
+                    "Name": "In2",
+                    "Type": "In",
+                    "Record": {
+                      "$id": "54",
+                      "From": 577,
+                      "To": 934,
+                      "FromPort": "Out",
+                      "ToPort": "In2",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "47"
+                    }
+                  },
+                  {
+                    "$id": "55",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "56",
+                "$values": []
+              }
+            },
+            "577": {
+              "$id": "57",
+              "$type": "QuadSpinner.Gaea.Nodes.Draw, Gaea.Nodes",
+              "StrokeData": "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",
+              "Id": 577,
+              "Name": "Draw",
+              "Position": {
+                "$id": "58",
+                "X": 26302.057,
+                "Y": 26463.582
+              },
+              "RenderIntentOverride": "Mask",
+              "Ports": {
+                "$id": "59",
+                "$values": [
+                  {
+                    "$id": "60",
+                    "Name": "In",
+                    "Type": "PrimaryIn",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "57"
+                    }
+                  },
+                  {
+                    "$id": "61",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "57"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "62",
+                "$values": []
+              }
+            },
+            "758": {
+              "$id": "63",
+              "$type": "QuadSpinner.Gaea.Nodes.EasyErosion, Gaea.Nodes",
+              "Influence": 0.5860303,
+              "Id": 758,
+              "Name": "EasyErosion",
+              "Position": {
+                "$id": "64",
+                "X": 27700.389,
+                "Y": 26203.582
+              },
+              "Ports": {
+                "$id": "65",
+                "$values": [
+                  {
+                    "$id": "66",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "67",
+                      "From": 287,
+                      "To": 758,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "63"
+                    }
+                  },
+                  {
+                    "$id": "68",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "63"
+                    }
+                  },
+                  {
+                    "$id": "69",
+                    "Name": "Flow",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "63"
+                    }
+                  },
+                  {
+                    "$id": "70",
+                    "Name": "Wear",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "63"
+                    }
+                  },
+                  {
+                    "$id": "71",
+                    "Name": "Deposits",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "63"
+                    }
+                  },
+                  {
+                    "$id": "72",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "63"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "73",
+                "$values": []
+              }
+            },
+            "932": {
+              "$id": "74",
+              "$type": "QuadSpinner.Gaea.Nodes.Seamless, Gaea.Nodes",
+              "Edge": 0.30028677,
+              "ShiftX": 0.6136829,
+              "ShiftY": 0.59524786,
+              "Id": 932,
+              "Name": "Seamless",
+              "Position": {
+                "$id": "75",
+                "X": 28414.385,
+                "Y": 26203.582
+              },
+              "Ports": {
+                "$id": "76",
+                "$values": [
+                  {
+                    "$id": "77",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "78",
+                      "From": 329,
+                      "To": 932,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "74"
+                    }
+                  },
+                  {
+                    "$id": "79",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "74"
+                    }
+                  },
+                  {
+                    "$id": "80",
+                    "Name": "Color",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "74"
+                    }
+                  },
+                  {
+                    "$id": "81",
+                    "Name": "Texture",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "74"
+                    }
+                  },
+                  {
+                    "$id": "82",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "74"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "83",
+                "$values": []
+              }
+            },
+            "432": {
+              "$id": "84",
+              "$type": "QuadSpinner.Gaea.Nodes.Export, Gaea.Nodes",
+              "Format": "PNG16",
+              "Location": "Custom",
+              "OutputPath": "E:\\Application Development\\OceanWorldGenerator",
+              "IfFileExists": "Increment",
+              "Id": 432,
+              "Name": "Export",
+              "Position": {
+                "$id": "85",
+                "X": 28759.387,
+                "Y": 26209.582
+              },
+              "Ports": {
+                "$id": "86",
+                "$values": [
+                  {
+                    "$id": "87",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "88",
+                      "From": 932,
+                      "To": 432,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "84"
+                    }
+                  },
+                  {
+                    "$id": "89",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "84"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "90",
+                "$values": []
+              }
+            },
+            "215": {
+              "$id": "91",
+              "$type": "QuadSpinner.Gaea.Nodes.Voronoi, Gaea.Nodes",
+              "Scale": 0.5030725,
+              "Jitter": 0.2963744,
+              "Form": "N",
+              "Gain": 0.27570668,
+              "Clamp": 0.45002046,
+              "Seed": 51558,
+              "Frequency": 0.056145024,
+              "Amplitude": 0.085210964,
+              "Id": 215,
+              "Name": "Voronoi",
+              "Position": {
+                "$id": "92",
+                "X": 26255.389,
+                "Y": 26691.914
+              },
+              "Ports": {
+                "$id": "93",
+                "$values": [
+                  {
+                    "$id": "94",
+                    "Name": "In",
+                    "Type": "PrimaryIn",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "91"
+                    }
+                  },
+                  {
+                    "$id": "95",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "91"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "96",
+                "$values": []
+              }
+            },
+            "329": {
+              "$id": "97",
+              "$type": "QuadSpinner.Gaea.Nodes.Rivers, Gaea.Nodes",
+              "Water": 0.70626795,
+              "Width": 0.34748057,
+              "Depth": 0.74076205,
+              "Downcutting": 0.20753786,
+              "RiverValleyWidth": "plus2",
+              "Headwaters": 3808,
+              "RenderSurface": false,
+              "Seed": 41523,
+              "Id": 329,
+              "Name": "Rivers",
+              "Position": {
+                "$id": "98",
+                "X": 28107.05,
+                "Y": 26203.582
+              },
+              "Ports": {
+                "$id": "99",
+                "$values": [
+                  {
+                    "$id": "100",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "101",
+                      "From": 758,
+                      "To": 329,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "102",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "103",
+                    "Name": "Headwaters",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "104",
+                    "Name": "Rivers",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "105",
+                    "Name": "Depth",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "106",
+                    "Name": "Surface",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "107",
+                    "Name": "Direction",
+                    "Type": "Out",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  },
+                  {
+                    "$id": "108",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "97"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "109",
+                "$values": []
+              }
+            },
+            "407": {
+              "$id": "110",
+              "$type": "QuadSpinner.Gaea.Nodes.Adjust, Gaea.Nodes",
+              "Multiply": 1.8095056,
+              "Shaper": -0.15813191,
+              "Clamp": {
+                "$id": "111",
+                "Y": 0.19469209
+              },
+              "Clip": {
+                "$id": "112",
+                "Y": 0.17949755
+              },
+              "Id": 407,
+              "Name": "Adjust",
+              "NodeSize": "Small",
+              "Position": {
+                "$id": "113",
+                "X": 26865.055,
+                "Y": 26691.914
+              },
+              "Ports": {
+                "$id": "114",
+                "$values": [
+                  {
+                    "$id": "115",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "116",
+                      "From": 215,
+                      "To": 407,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "110"
+                    }
+                  },
+                  {
+                    "$id": "117",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "110"
+                    }
+                  },
+                  {
+                    "$id": "118",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "110"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "119",
+                "$values": []
+              }
+            },
+            "125": {
+              "$id": "120",
+              "$type": "QuadSpinner.Gaea.Nodes.Blur, Gaea.Nodes",
+              "Radius": 0.07125063,
+              "Id": 125,
+              "Name": "Blur",
+              "Position": {
+                "$id": "121",
+                "X": 26635.055,
+                "Y": 26600.58
+              },
+              "Ports": {
+                "$id": "122",
+                "$values": [
+                  {
+                    "$id": "123",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "124",
+                      "From": 215,
+                      "To": 125,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "120"
+                    }
+                  },
+                  {
+                    "$id": "125",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "120"
+                    }
+                  },
+                  {
+                    "$id": "126",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "120"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "127",
+                "$values": []
+              }
+            },
+            "487": {
+              "$id": "128",
+              "$type": "QuadSpinner.Gaea.Nodes.Blur, Gaea.Nodes",
+              "Radius": 0.027005749,
+              "Id": 487,
+              "Name": "Blur",
+              "Position": {
+                "$id": "129",
+                "X": 27012.055,
+                "Y": 26691.914
+              },
+              "Ports": {
+                "$id": "130",
+                "$values": [
+                  {
+                    "$id": "131",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "132",
+                      "From": 407,
+                      "To": 487,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "128"
+                    }
+                  },
+                  {
+                    "$id": "133",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "128"
+                    }
+                  },
+                  {
+                    "$id": "134",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "128"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "135",
+                "$values": []
+              }
+            },
+            "632": {
+              "$id": "136",
+              "$type": "QuadSpinner.Gaea.Nodes.Combine, Gaea.Nodes",
+              "PortCount": 2,
+              "Ratio": 1.0,
+              "Mode": "Add",
+              "Id": 632,
+              "Name": "Combine",
+              "NodeSize": "Small",
+              "Position": {
+                "$id": "137",
+                "X": 27342.055,
+                "Y": 26184.582
+              },
+              "Ports": {
+                "$id": "138",
+                "$values": [
+                  {
+                    "$id": "139",
+                    "Name": "In",
+                    "Type": "PrimaryIn, Required",
+                    "Record": {
+                      "$id": "140",
+                      "From": 309,
+                      "To": 632,
+                      "FromPort": "Out",
+                      "ToPort": "In",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "136"
+                    }
+                  },
+                  {
+                    "$id": "141",
+                    "Name": "Out",
+                    "Type": "PrimaryOut",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "136"
+                    }
+                  },
+                  {
+                    "$id": "142",
+                    "Name": "Input2",
+                    "Type": "In",
+                    "Record": {
+                      "$id": "143",
+                      "From": 125,
+                      "To": 632,
+                      "FromPort": "Out",
+                      "ToPort": "Input2",
+                      "IsValid": true
+                    },
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "136"
+                    }
+                  },
+                  {
+                    "$id": "144",
+                    "Name": "Mask",
+                    "Type": "In",
+                    "IsExporting": true,
+                    "Parent": {
+                      "$ref": "136"
+                    }
+                  }
+                ]
+              },
+              "Modifiers": {
+                "$id": "145",
+                "$values": []
+              }
+            }
+          },
+          "Groups": {
+            "$id": "146"
+          },
+          "Notes": {
+            "$id": "147"
+          },
+          "GraphTabs": {
+            "$id": "148",
+            "$values": [
+              {
+                "$id": "149",
+                "Name": "Graph 1",
+                "Color": "Brass",
+                "ZoomFactor": 0.5000000000000004,
+                "ViewportLocation": {
+                  "$id": "150",
+                  "X": 26355.549,
+                  "Y": 26109.146
+                }
+              }
+            ]
+          },
+          "Width": 5000.0,
+          "Height": 2500.0,
+          "Ratio": 0.5,
+          "Regions": {
+            "$id": "151",
+            "$values": []
+          }
+        },
+        "Automation": {
+          "$id": "152",
+          "Bindings": {
+            "$id": "153",
+            "$values": []
+          },
+          "Expressions": {
+            "$id": "154"
+          },
+          "Variables": {
+            "$id": "155"
+          }
+        },
+        "BuildDefinition": {
+          "$id": "156",
+          "Type": "Standard",
+          "Destination": "<Builds>\\[Filename]\\[+++]",
+          "Resolution": 2048,
+          "BakeResolution": 2048,
+          "TileResolution": 1024,
+          "BucketResolution": 2048,
+          "NumberOfTiles": 3,
+          "EdgeBlending": 0.25,
+          "TileZeroIndex": true,
+          "TilePattern": "_y%Y%_x%X%",
+          "OrganizeFiles": "NodeSubFolder",
+          "ColorSpace": "sRGB"
+        },
+        "State": {
+          "$id": "157",
+          "BakeResolution": 2048,
+          "PreviewResolution": 1024,
+          "HDResolution": 4096,
+          "SelectedNode": 432,
+          "NodeBookmarks": {
+            "$id": "158",
+            "$values": []
+          },
+          "Viewport": {
+            "$id": "159",
+            "CameraPosition": {
+              "$id": "160",
+              "$values": []
+            },
+            "Camera": {
+              "$id": "161"
+            },
+            "RenderMode": "Realistic",
+            "AmbientOcclusion": true,
+            "Shadows": true
+          }
+        },
+        "BuildProfiles": {
+          "$id": "162"
+        }
+      }
+    ]
+  },
+  "Id": "655dae92",
+  "Branch": 1,
+  "Metadata": {
+    "$id": "163",
+    "Name": "",
+    "Description": "",
+    "Version": "2.2.6.0",
+    "Edition": "G2P",
+    "Owner": "",
+    "DateCreated": "2025-11-19 16:35:42Z",
+    "DateLastBuilt": "2025-11-19 16:35:42Z",
+    "DateLastSaved": "2025-11-19 16:35:42Z",
+    "ModifiedVersion": "2.2.6.0"
+  }
+}
